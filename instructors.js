@@ -1,6 +1,30 @@
 const fs = require('fs')
 const data = require('./data.json')
+const { RSA_NO_PADDING } = require('constants')
+const { age, date } = require('./utils')
+const Intl = require('intl')
 
+//show
+exports.show = function(req, res){
+    const { id } = req.params
+
+    const foundInstructor = data.instructors.find(function(instructor){
+        return instructor.id == id
+    })
+
+    if ( !foundInstructor ) return res.send("Instrutor não encontrado")
+
+    const instructor = {
+        ...foundInstructor, // espalha o resto das keys do objeto
+        age: age(foundInstructor.birth),
+        services:foundInstructor.services.split(','), //transformando em um array
+        created_at: new Intl.DateTimeFormat("pt-BR").format(foundInstructor.created_at),
+    }
+
+    return res.render('instructors/show',{ instructor })
+}
+
+//create
 exports.post = function(req, res){
     //cria uma array de chaves
     const keys = Object.keys(req.body)
@@ -32,9 +56,29 @@ exports.post = function(req, res){
             return res.send('write file error')
         }            
 
-        return res.redirect('/instructors')
+        return res.redirect(`/instructors/${id}`)
 
     })
 
     //return res.send(req.body)
+}
+
+//edit
+
+exports.edit = function(req, res){
+
+    const { id } = req.params
+
+    const foundInstructor = data.instructors.find(function(instructor){
+        return instructor.id == id
+    })
+
+    if ( !foundInstructor ) return res.send("Instrutor não encontrado")
+
+    const instructor = {
+        ...foundInstructor,
+        birth:date(foundInstructor.birth)
+    }
+
+    return res.render('instructors/edit', { instructor })
 }
