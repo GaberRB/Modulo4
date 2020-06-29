@@ -1,31 +1,13 @@
 {
   "instructors": [
     {
-      "id": 1,
+      "id": "1",
       "avatar_url": "http://localhost:3000/instructors/create",
       "name": "Kiora Wins ",
-      "birth": 1591574400000,
+      "birth": 644803200000,
       "gender": "F",
       "services": "crossfit, musculação",
       "created_at": 1593186304269
-    },
-    {
-      "id": 2,
-      "avatar_url": "http://localhost:3000/instructors/create",
-      "name": "Kiora Wins ",
-      "birth": 1591315200000,
-      "gender": "F",
-      "services": "crossfit, musculação",
-      "created_at": 1593186376615
-    },
-    {
-      "id": 3,
-      "avatar_url": "http://localhost:3000/instructors/create",
-      "name": "Kiora Wins ",
-      "birth": 1591315200000,
-      "gender": "F",
-      "services": "crossfit, musculação",
-      "created_at": 1593186409363
     },
     {
       "id": 4,
@@ -197,6 +179,15 @@
       "gender": "F",
       "services": "crossfit, musculação, Natação, Poledance",
       "created_at": 1593300398768
+    },
+    {
+      "id": 23,
+      "avatar_url": "http://localhost:3000/instructors/create",
+      "name": "Kiora Wins ",
+      "birth": 644803200000,
+      "gender": "F",
+      "services": "crossfit, musculação",
+      "created_at": 1593390037338
     }
   ]
 }
