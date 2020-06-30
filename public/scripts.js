@@ -1,12 +1,15 @@
-const modalOverlay = document.querySelector('.modal-overlay');
-const cards = document.querySelectorAll('.card');
+const trs = document.querySelectorAll('.lines')
+let id = 0
+for (tr of trs) {
+    id = id + 1
+    let elements =  document.getElementById(id).textContent.split(',')
+    console.log(elements)
+    document.getElementById(id).innerHTML = ""
+    for (element of elements){
+        console.log(document.getElementById(id).innerHTML)
+        document.getElementById(id).innerHTML += ` <span>${element}</span>`
 
-for ( let card of cards ){
-    card.addEventListener("click", function(){
-        const videoId = card.getAttribute('id');
-        window.location.href = `/video?id=${videoId}`
-        
-    })
+    }
+
 }
-
 

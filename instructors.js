@@ -1,9 +1,14 @@
 const fs = require('fs')
 const data = require('./data.json')
-const { RSA_NO_PADDING } = require('constants')
+//const { RSA_NO_PADDING } = require('constants')
 const { age, date } = require('./utils')
 const Intl = require('intl')
 
+//index
+exports.index =  function(req, res){
+    
+    return res.render('instructors/index', {instructors: data.instructors})
+}
 //show
 exports.show = function(req, res){
     const { id } = req.params
@@ -100,7 +105,8 @@ exports.put = function(req, res){
     const instructor = {
         ...foundInstructor,
         ...req.body,
-        birth: Date.parse(req.body.birth)
+        birth: Date.parse(req.body.birth),
+        id: Number(req.body.id)
     }
 
     data.instructors[index] = instructor
