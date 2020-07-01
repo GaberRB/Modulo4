@@ -1,23 +1,35 @@
 {
-  "members": [],
-  "instructors": [
+  "members": [
     {
       "id": 1,
       "avatar_url": "https://images.unsplash.com/photo-1528720208104-3d9bd03cc9d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
-      "name": "João",
-      "birth": 502243200000,
+      "name": "GABRIEL RIOS BELMIRO",
+      "email": "grios0311@gmail.com",
+      "birth": 689126400000,
       "gender": "M",
-      "services": "crossfit, musculação",
-      "created_at": 1593296836231
+      "blood": "A+",
+      "weight": "94",
+      "height": "188"
+    }
+  ],
+  "instructors": [
+    {
+      "id": 3,
+      "avatar_url": "https://images.unsplash.com/photo-1584863371502-048abf845b07?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
+      "name": "Mateus Quintino",
+      "birth": 787449600000,
+      "gender": "M",
+      "services": "musculação, aeróbico",
+      "created_at": 1593555035018
     },
     {
       "id": 2,
-      "avatar_url": "https://images.unsplash.com/photo-1581009137042-c552e485697a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80",
+      "avatar_url": "https://images.unsplash.com/photo-1528720208104-3d9bd03cc9d4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=334&q=80",
       "name": "Gabriel Rios",
       "birth": 689126400000,
       "gender": "M",
-      "services": "crossfit, musculação, Natação",
-      "created_at": 1593300044794
+      "services": "musculação, aeróbico",
+      "created_at": 1593568548252
     }
   ]
 }
